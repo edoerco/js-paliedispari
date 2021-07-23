@@ -25,12 +25,42 @@ function palindroma(str) {
 }
 console.log(palindroma(richiesta));
   
-
-
+console.log('---------------------------');
 
 // Pari e Dispari
-// L’utente sceglie pari o dispari e inserisce un numero da 1 a 5.
+// L’utente sceglie pari o dispari 
+var scelta = prompt('Scegli: Pari o Dispari?');
+console.log(scelta);
+
+// Inserisce un numero da 1 a 5.
+var numeroGiocatore = parseInt(prompt('Inserisci un numero da 1 a 5'));
+console.log(numeroGiocatore);
+
 // Generiamo un numero random (sempre da 1 a 5) per il computer (usando una funzione).
+var numeroComputer = Math.floor(Math.random() * 5 ) + 1;
+console.log(numeroComputer);
+
 // Sommiamo i due numeri
+var somma = numeroGiocatore + numeroComputer;
+console.log(somma);
+
 // Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione)
+if(somma % 2 == 0) {
+    console.log('La somma è pari')
+} 
+else 
+{
+    console.log('La somma è dispari')
+}
+
 // Dichiariamo chi ha vinto.
+if((scelta == 'pari') && (somma % 2 == 0)) {
+    console.log('Hai vinto');
+} 
+else if((scelta == 'dispari') && (somma % 2 != 0)) {
+    console.log('Hai vinto');
+} 
+else
+{
+    console.log('Il computer vince');
+} 

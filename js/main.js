@@ -1,6 +1,30 @@
 // Palindroma.
 // Chiedere all’utente di inserire una parola.
+var richiesta = prompt('inserisci una parola');
+console.log(richiesta);
+
+// var parolaDivisa = richiesta.split('');
+// console.log(parolaDivisa);
+
+// var parolaInversa = parolaDivisa.reverse();
+// console.log(parolaInversa);
+
+// var parola = parolaInversa.join('');
+// console.log(parola);
+
 // Creare una funzione per capire se la parola inserita è palindroma.
+function palindroma(str) {
+    var parolaDef = richiesta.split('').reverse().join('');   // 'parolaDef' concatena tutte le varianti di prima
+    console.log(parolaDef);
+
+    if(richiesta == parolaDef) {
+        return str + ' la parola è palindroma'
+    } else {
+        return str + ' la parola non è palindroma'
+    }
+}
+console.log(palindroma(richiesta));
+  
 
 
 
